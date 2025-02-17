@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>사용자 정보 입력받고 출력하기</title>
+    <style>
+        #hobby{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="name"></h1>
+    <p id="hobby"></p>
+    <p id="song"></p>
+
+    <script>
+
+        const nameElement = document.querySelector("#name") 
+        //선택한 결과는 반환되기 떄문에 상수형태로 저장
+        //id가 name이라는 선택자를 입력했더니 querySelector가 처리해서 const 반환이라는 결과를 출력
+        let name = prompt("당신의 이름은?")
+        //사용자한태 이름을 받을때 prompt 활용 이름을 입력하면 입력된 처리 결과로 값을 반환
+        //name이라고 변수 붙여서 저장이라는 결과
+        nameElement.textContent = name
+        //내가 입력받은 name을 textContent에다가 데이터를 처리를 하면 그 결과 화면에 출력이 일어남
+
+        const hobbyElement = document.querySelector("#hobby") 
+        let hobby = prompt("당신의 취미는?")
+        hobbyElement.textContent = `취미는 ${hobby}입니다!`
+
+        document.querySelector("#song")
+        .textContent = `좋아하는 곡은 ${prompt("좋아하는 곡은?")}입니다!`
+
+    </script>
+
+</body>
+</html>
